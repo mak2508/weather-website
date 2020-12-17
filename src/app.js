@@ -21,6 +21,13 @@ app.get('/about', (req, res) => {
   })
 })
 
+app.get('/help', (req, res) => {
+  res.render('help', {
+    title: 'Help',
+    help_text: 'Sucks to be you'
+  })
+})
+
 app.get('/weather', (req, res) => {
   res.send({
     location: 'Doha',
