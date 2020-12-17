@@ -47,6 +47,23 @@ app.get('/weather', (req, res) => {
   })
 })
 
+app.get('/help/*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Ahmad Khan',
+    errorMsg: 'Help article not found'
+  })
+})
+
+/// placed at the end since matching occurs in order
+app.get('*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Ahmad Khan',
+    errorMsg: 'Page not found'
+  })
+})
+
 // app.com
 // app.com/help
 // app.com/about
