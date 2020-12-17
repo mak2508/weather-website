@@ -7,10 +7,17 @@ publicPath = path.join(__dirname, '../public')
 app.set('view engine', 'hbs')
 app.use(express.static(publicPath))
 
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
   res.render('index', {
     title: 'Weather App',
     name: 'Ahmad Khan'
+  })
+})
+
+app.get('/about', (req, res) => {
+  res.render('about', {
+    title: 'About me',
+    name: 'Dona Ferdinando'
   })
 })
 
