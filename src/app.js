@@ -3,8 +3,10 @@ const express = require('express')
 
 const app = express()
 publicPath = path.join(__dirname, '../public')
+viewsPath = path.join(__dirname, '../templates')
 
 app.set('view engine', 'hbs')
+app.set('views', viewsPath)
 app.use(express.static(publicPath))
 
 app.get('', (req, res) => {
