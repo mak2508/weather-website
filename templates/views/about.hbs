@@ -2,14 +2,20 @@
 
 <html>
 
-  <head>
-    <link rel="stylesheet" href="/css/styles.css">
-  </head>
-  <body>
+<head>
+  <title>About</title>
+  <link rel="icon" href="/img/weather.png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="main-content">
     {{>header}}
-    <img src="./img/IMG_1184.jpeg">
+    <div>
+      <img class="portrait" src="/img/IMG_1184.jpeg">
+    </div>
     <p> Hi y'all I'm {{personName}}, a cute Sri Lankan girl. Soon enough though I'll be a kiwi girl ;).</p>
-    {{>footer}}
-  </body>
+  </div>
+  {{>footer}}
+</body>
 
 </html>
