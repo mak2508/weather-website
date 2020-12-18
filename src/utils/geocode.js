@@ -5,9 +5,9 @@ const geocode = (address, callback) => {
 
   request({url, json: true}, (error, { body } = {}) => {
     if (error) {
-      callback('Unable to connect to mapbox', undefined)
+      callback('Unable to connect to mapbox')
     } else if (body.features.length === 0) {
-      console.log("Location not found in mapbox API")
+      callback("Location not found in mapbox API")
     } else {
       callback(undefined, {
         longitude: body.features[0].center[0],
